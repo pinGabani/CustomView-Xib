@@ -13,6 +13,9 @@
 		2AB41B0A2BBA8A1E00154878 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2AB41B082BBA8A1E00154878 /* Main.storyboard */; };
 		2AB41B0C2BBA8A1F00154878 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2AB41B0B2BBA8A1F00154878 /* Assets.xcassets */; };
 		2AB41B0F2BBA8A1F00154878 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2AB41B0D2BBA8A1F00154878 /* LaunchScreen.storyboard */; };
+		2AB41B1D2BBADBC700154878 /* CustomXibView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AB41B1C2BBADBC700154878 /* CustomXibView.swift */; };
+		2AB41B1F2BBAE40D00154878 /* CustomXibView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2AB41B1E2BBAE40D00154878 /* CustomXibView.xib */; };
+		2AB41B222BBBD5D800154878 /* Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AB41B212BBBD5D800154878 /* Extension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +27,9 @@
 		2AB41B0B2BBA8A1F00154878 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		2AB41B0E2BBA8A1F00154878 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		2AB41B102BBA8A1F00154878 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2AB41B1C2BBADBC700154878 /* CustomXibView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomXibView.swift; sourceTree = "<group>"; };
+		2AB41B1E2BBAE40D00154878 /* CustomXibView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CustomXibView.xib; sourceTree = "<group>"; };
+		2AB41B212BBBD5D800154878 /* Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extension.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,13 +64,40 @@
 			children = (
 				2AB41B022BBA8A1E00154878 /* AppDelegate.swift */,
 				2AB41B042BBA8A1E00154878 /* SceneDelegate.swift */,
-				2AB41B062BBA8A1E00154878 /* ViewController.swift */,
 				2AB41B082BBA8A1E00154878 /* Main.storyboard */,
 				2AB41B0B2BBA8A1F00154878 /* Assets.xcassets */,
 				2AB41B0D2BBA8A1F00154878 /* LaunchScreen.storyboard */,
 				2AB41B102BBA8A1F00154878 /* Info.plist */,
+				2AEFAE152BBBDDB000796EF4 /* Helper */,
+				2AB41B232BBBD67100154878 /* Controllers */,
+				2AB41B202BBBD0FD00154878 /* CustomXIB+View */,
 			);
 			path = "CustomView+Xib";
+			sourceTree = "<group>";
+		};
+		2AB41B202BBBD0FD00154878 /* CustomXIB+View */ = {
+			isa = PBXGroup;
+			children = (
+				2AB41B1C2BBADBC700154878 /* CustomXibView.swift */,
+				2AB41B1E2BBAE40D00154878 /* CustomXibView.xib */,
+			);
+			path = "CustomXIB+View";
+			sourceTree = "<group>";
+		};
+		2AB41B232BBBD67100154878 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				2AB41B062BBA8A1E00154878 /* ViewController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		2AEFAE152BBBDDB000796EF4 /* Helper */ = {
+			isa = PBXGroup;
+			children = (
+				2AB41B212BBBD5D800154878 /* Extension.swift */,
+			);
+			path = Helper;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -128,6 +161,7 @@
 				2AB41B0F2BBA8A1F00154878 /* LaunchScreen.storyboard in Resources */,
 				2AB41B0C2BBA8A1F00154878 /* Assets.xcassets in Resources */,
 				2AB41B0A2BBA8A1E00154878 /* Main.storyboard in Resources */,
+				2AB41B1F2BBAE40D00154878 /* CustomXibView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -138,9 +172,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2AB41B222BBBD5D800154878 /* Extension.swift in Sources */,
 				2AB41B072BBA8A1E00154878 /* ViewController.swift in Sources */,
 				2AB41B032BBA8A1E00154878 /* AppDelegate.swift in Sources */,
 				2AB41B052BBA8A1E00154878 /* SceneDelegate.swift in Sources */,
+				2AB41B1D2BBADBC700154878 /* CustomXibView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -290,16 +326,19 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CODE_SIGN_STYLE = Automatic;
+				CODE_SIGN_STYLE = Manual;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 4J997S4MTT;
+				DEVELOPMENT_TEAM = "";
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "CustomView+Xib/Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = CustomView;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UIStatusBarStyle = "";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -307,9 +346,13 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.gabani.CustomView-Xib";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -318,16 +361,19 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CODE_SIGN_STYLE = Automatic;
+				CODE_SIGN_STYLE = Manual;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 4J997S4MTT;
+				DEVELOPMENT_TEAM = "";
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "CustomView+Xib/Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = CustomView;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UIStatusBarStyle = "";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -335,9 +381,13 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.gabani.CustomView-Xib";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
